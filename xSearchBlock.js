@@ -4,6 +4,7 @@
 // @version      0.91
 // @description  Enhanced Twitter search filter with UI controls and quick block button
 // @match        https://x.com/search*
+// @author       tcitds1
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @updateURL    https://cdn.jsdelivr.net/gh/tcitds1/tampermonkey@main/xSearchBlock.js

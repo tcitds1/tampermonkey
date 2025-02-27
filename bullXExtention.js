@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.2
 // @description  Add quick action buttons to BullX and XXYY
-// @author       Your name
+// @author       tcitds1
 // @match        https://neo.bullx.io/*
 // @match        https://pro.xxyy.io/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bullx.io
