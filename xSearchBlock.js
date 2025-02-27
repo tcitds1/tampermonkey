@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         xSearchBlock
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  Enhanced Twitter search filter with UI controls and quick block button
 // @match        https://x.com/search*
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @updateURL    https://raw.githubusercontent.com/tcitds1/tampermonkey/main/xSearchBlock.js
+// @downloadURL  https://raw.githubusercontent.com/tcitds1/tampermonkey/main/xSearchBlock.js
 // ==/UserScript==
 
 (function() {
