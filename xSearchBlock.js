@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         xSearchBlock
 // @namespace    http://tampermonkey.net/
-// @version      0.8
+// @version      0.9
 // @description  Enhanced Twitter search filter with UI controls and quick block button
 // @match        https://x.com/search*
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @updateURL    https://raw.githubusercontent.com/tcitds1/tampermonkey/main/xSearchBlock.js
-// @downloadURL  https://raw.githubusercontent.com/tcitds1/tampermonkey/main/xSearchBlock.js
+// @updateURL    https://raw.githubusercontent.com/tcitds1/tampermonkey/refs/heads/main/xSearchBlock.js
+// @downloadURL  https://raw.githubusercontent.com/tcitds1/tampermonkey/refs/heads/main/xSearchBlock.js
 // ==/UserScript==
 
 (function() {
@@ -23,7 +23,7 @@
   };
 
   // 版本信息
-  const VERSION = '0.8';
+  const VERSION = '0.9';
 
   // 样式定义
   const STYLES = `
@@ -308,8 +308,8 @@
 
       .x-version-info {
           position: absolute;
-          bottom: 10px;
-          right: 10px;
+          top: 10px;
+          left: 10px;
           color: #8899a6;
           font-size: 11px;
           opacity: 0.7;
