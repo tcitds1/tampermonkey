@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Unified Quick Actions
+// @name         BullX Extention
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Add quick action buttons to BullX and XXYY
 // @author       Your name
 // @match        https://neo.bullx.io/*
@@ -164,6 +164,14 @@
           }
       }));
 
+      // 修改 Pump.news 按钮文字
+      container.appendChild(createButton('pNews', () => {
+          const contractAddress = getBullXContractAddress();
+          if (contractAddress) {
+              window.open(`https://www.pump.news/zh/${contractAddress}-solana`, '_blank');
+          }
+      }));
+
       return container;
   }
 
@@ -195,6 +203,14 @@
               window.open(`https://x.com/search?q=${contractAddress}&f=live`, '_blank');
           }
       }, true));
+
+      // 修改 Pump.news 按钮文字
+      container.appendChild(createButton('pNews', () => {
+          const contractAddress = getXXYYContractAddress();
+          if (contractAddress) {
+              window.open(`https://www.pump.news/zh/${contractAddress}-solana`, '_blank');
+          }
+      }));
 
       return container;
   }
