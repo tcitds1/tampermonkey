@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xSearchBlock
 // @namespace    http://tampermonkey.net/
-// @version      0.91
+// @version      0.92
 // @description  Enhanced Twitter search filter with UI controls and quick block button
 // @match        https://x.com/search*
 // @author       tcitds1
@@ -75,7 +75,7 @@
 
       .x-filter-section {
           margin-bottom: 24px;
-          max-height: 60vh;
+          max-height: 35vh;
           overflow-y: auto;
           overflow-x: hidden;
           padding-right: 10px;
@@ -299,6 +299,7 @@
 
       .rules-container {
           transition: max-height 0.3s ease-in-out;
+          padding-bottom: 50px; /* Add padding to ensure bottom content is visible when scrolling */
       }
 
       .rules-container.collapsed {

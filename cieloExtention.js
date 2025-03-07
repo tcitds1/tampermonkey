@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Cielo Address Notator
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Add stylish notes to Solana addresses on Cielo Finance
 // @author       tcitds1
+// @match        https://app.cielo.finance/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cielo.finance
 // @grant        GM_setValue
 // @grant        GM_getValue
