@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BullX Extention
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Add quick action buttons to BullX and XXYY
 // @author       tcitds1
 // @match        https://neo.bullx.io/terminal
@@ -93,6 +93,15 @@
       return pathParts[pathParts.length - 1];
   }
 
+  // 获取代币名称
+  function getTokenName() {
+      const tooltipElement = document.querySelector('.ant-tooltip-inner[role="tooltip"]');
+      if (tooltipElement) {
+          return tooltipElement.textContent.trim();
+      }
+      return '';
+  }
+
   // 创建搜索图标SVG
   function createSearchIcon() {
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -172,6 +181,14 @@
           }
       }));
 
+      // 名称搜索按钮
+      container.appendChild(createButton('Name', () => {
+          const name = getTokenName();
+          if (name) {
+              window.open(`https://x.com/search?q=${encodeURIComponent(name)}&src=typed_query&f=live`, '_blank');
+          }
+      }, true));
+
       return container;
   }
 
@@ -211,6 +228,14 @@
               window.open(`https://www.pump.news/zh/${contractAddress}-solana`, '_blank');
           }
       }));
+
+      // 名称搜索按钮
+      container.appendChild(createButton('Name', () => {
+          const name = getTokenName();
+          if (name) {
+              window.open(`https://x.com/search?q=${encodeURIComponent(name)}&src=typed_query&f=live`, '_blank');
+          }
+      }, true));
 
       return container;
   }
