@@ -4,7 +4,7 @@
 // @version      0.3
 // @description  Add quick action buttons to BullX and XXYY
 // @author       tcitds1
-// @match        https://neo.bullx.io/terminal
+// @match        https://neo.bullx.io/terminal*
 // @match        https://pro.xxyy.io/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bullx.io
 // @grant        none

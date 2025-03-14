@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GMGN Extension
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Enhanced version with better UX, performance and stability for gmgn.ai
 // @author       Your name
 // @match        https://gmgn.ai/*
@@ -333,7 +333,7 @@
       document.addEventListener('mouseover', function(event) {
           if (!CONFIG.isEnabled) return;
 
-          const link = event.target.closest('a[href^="/sol/address/"], a[href^="/eth/address/"]');
+          const link = event.target.closest('a[href^="/sol/address/"], a[href^="/eth/address/"], a[href^="/bsc/address/"]');
           if (link) {
               clearTimeout(timer);
               document.body.querySelectorAll('.custom-button').forEach(button => button.remove());
